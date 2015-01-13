@@ -40,12 +40,12 @@ Steps
 - Pre-process the training data using StanfordCoreNLP to generate xml files.
 - Select 500 (approximately 20% of the total train set) files with highest human summary word overlap and 500 files with lowest human summary word overlap as the train data. Among the remaining files, randomly choose a few as the validation set.
 - Feature Extraction:
-  a. Top 10000 words
-  b. Top 10000 production rules
-  c. Top 10000 dependency relations
-  d. Top 500 MI words from Information Dense texts and top 500 MI words from Non-information dense texts
-  e. Bag of 4923 words from MRC database
-  f. Bag of 230 intervals for every word property (Imagibility, Familiarity, Concreteness, Age of Acquisition, Mean correctness) representing the fraction of words with scores in that corresponding interval of that
+  -- Top 10000 words
+  -- Top 10000 production rules
+  -- Top 10000 dependency relations
+  -- Top 500 MI words from Information Dense texts and top 500 MI words from Non-information dense texts
+  -- Bag of 4923 words from MRC database
+  -- Bag of 230 intervals for every word property (Imagibility, Familiarity, Concreteness, Age of Acquisition, Mean correctness) representing the fraction of words with scores in that corresponding interval of that
 property 
 - Map every lead file to the above mentioned feature spaces. Use the combination of these feature vectors to represent the lead file 
 - Train the LibSVM model on feature vectors of the lead files in the selected train set.
