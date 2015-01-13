@@ -11,11 +11,6 @@ from os.path import basename
 import subprocess
 import shutil
 
-
-#NOTE - PLEASE REMOVE THE OS.REMOVE AND SHUTIL.RMTREE STATEMENTS IN THE FUNCTIONS IF YOU WANT TO LOOK AT THE INTERMEDIATE RESULTS AND VERIFY INFORMATION. I HAVE WRITTEN THESE STATEMENTS TO AUTOCLEAN THE TEMPORARY FILES, DIRECTORIES THAT THE PROGRAM CREATES
-
-
-
 #preprocess list of files and output to directory. The list of files is specified in the raw_text_file
 def preprocess(raw_text_file, corenlp_output):
     ret_code = os.system("java -cp /home1/c/cis530/hw3/corenlp/stanford-corenlp-2012-07-09/stanford-corenlp-2012-07-09.jar:/home1/c/cis530/hw3/corenlp/stanford-corenlp-2012-07-09/stanford-corenlp-2012-07-06-models.jar:/home1/c/cis530/hw3/corenlp/stanford-corenlp-2012-07-09/xom.jar:/home1/c/cis530/hw3/corenlp/stanford-corenlp-2012-07-09/joda-time.jar -Xmx3g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit,pos,lemma,ner -filelist "+raw_text_file+" -outputDirectory "+ corenlp_output)
