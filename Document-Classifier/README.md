@@ -40,8 +40,8 @@ Steps
 - Pre-process the training data using StanfordCoreNLP to generate xml files.
 - Select 500 (approximately 20% of the total train set) files with highest human summary word overlap and 500 files with lowest human summary word overlap as the train data. Among the remaining files, randomly choose a few as the validation set.
 - Feature Extraction:
-  -- Top 10000 words
-  -- Top 10000 production rules
+-- Top 10000 words
+-- Top 10000 production rules
   -- Top 10000 dependency relations
   -- Top 500 MI words from Information Dense texts and top 500 MI words from Non-information dense texts
   -- Bag of 4923 words from MRC database
