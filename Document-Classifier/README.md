@@ -31,6 +31,7 @@ implement a similarity matrix in conjunction with a unigram model.
 **Algorithm:**
 
 **Input:** Training data with class labels, testing data
+
 **Output:** 
  - Predicted labels of test data
  - Accuracy (No of labels predicted correctly / actual labels)
